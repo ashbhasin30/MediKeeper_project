@@ -23,7 +23,7 @@ describe('Part 2 - Checking the functionality of all input fields in the slideou
         cy.get('#ctl00_MainContent_errorMessageAlert') 
     })
 
-    it('Submitting a non-empty username input presents the data input field', () => {
+    it('Submitting a non-empty username input presents the date of birth input field', () => {
         cy.visit('https://salesdemo.medikeeper.com/accounts/v8/salesdemo/login')
         cy.contains('Forgot Password').click()
         cy.get('.offcanvas-panel--loaded')
