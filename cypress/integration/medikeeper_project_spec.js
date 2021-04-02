@@ -38,6 +38,9 @@ describe('Part 2 - Checking the functionality of all input fields in the slideou
     it('Submitting an invalid date yields an error message', () => {
         cy.visit('https://salesdemo.medikeeper.com/accounts/v8/salesdemo/login')
         cy.contains('Forgot Password').click()
+        cy.get('#tbxUsername')
+          .type('Testing Username')
+          .should('have.value', 'Testing Username')
         cy.contains('Next').click()
         
         cy.get('#tbxDOB').click()
@@ -69,6 +72,9 @@ describe('Part 2 - Checking the functionality of all input fields in the slideou
     it('Submitting an empty date yields an error message', () => {
         cy.visit('https://salesdemo.medikeeper.com/accounts/v8/salesdemo/login')
         cy.contains('Forgot Password').click()
+        cy.get('#tbxUsername')
+          .type('Testing Username')
+          .should('have.value', 'Testing Username')
         cy.contains('Next').click()
         cy.get('#btnForgotPDob').click()
         cy.get('#ctl00_MainContent_errorMessageAlert') 
