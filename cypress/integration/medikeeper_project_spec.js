@@ -54,8 +54,8 @@ describe('Part 2 - Checking the functionality of all input fields in the slideou
             var splitCurDate = curDate.split('/')
             var splitTestDate = testDate.split('/')
             var sixteenthYearFromCurYearInt = parseInt(splitCurDate[2]) - 16
-            const sixteenYearsDateFromCurDate = new Date(sixteenthYearFromCurYearInt, splitCurDate[0], splitCurDate[1])
-            const newTestDateFormat = new Date(splitTestDate[2], splitTestDate[0], splitTestDate[1])
+            var sixteenYearsDateFromCurDate = new Date(sixteenthYearFromCurYearInt, splitCurDate[0], splitCurDate[1])
+            var newTestDateFormat = new Date(splitTestDate[2], splitTestDate[0], splitTestDate[1])
             if (sixteenYearsDateFromCurDate.getTime() <= newTestDateFormat.getTime())
             {
                 //test date is within the 16 years range from current date, which is invalid
